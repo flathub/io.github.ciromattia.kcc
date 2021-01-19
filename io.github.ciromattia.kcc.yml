@@ -29,9 +29,6 @@ modules:
         commands: 
         - sed -i 's|/usr/local|/app|g' makefile.common
 
-      - type: patch
-        path: p7zip-makefile-norar.patch
-
   - name: pyqt5
     build-options:
       arch:
