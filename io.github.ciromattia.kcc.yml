@@ -7,11 +7,28 @@ finish-args:
   - --socket=fallback-x11
   - --share=ipc
   - --share=network
+  - --device=dri
   - --filesystem=home
   - --talk-name=org.freedesktop.Notifications
   - --talk-name=org.kde.StatusNotifierWatcher
+
+cleanup-commands:
+  - rm -r ${FLATPAK_DEST}/lib/*/site-packages/PyQt5/bindings
+
+build-options:
+  env:
+    pyqt5_opts: >-
+      --no-designer-plugin
+      --no-qml-plugin
+      --no-tools
+      --enable QtCore
+      --enable QtGui
+      --enable QtNetwork
+      --enable QtWidgets
+
 modules:
-  - qemu-user-i386.json
+  - pyqt5/pyqt5.yml
+  - dependencies/qemu-user-i386.json
 
   - name: p7zip
     no-autogen: true
@@ -28,42 +45,6 @@ modules:
       - type: shell
         commands: 
         - sed -i 's|/usr/local|/app|g' makefile.common
-
-  - name: pyqt5
-    build-options:
-      arch:
-        aarch64:
-          env:
-            config_opt: "--disable-feature=PyQt_Desktop_OpenGL"
-    cleanup:
-      - /bin
-    buildsystem: simple
-    build-commands:
-      - PY_VER=python$(python3 -c 'import sys; print(sys.version[:3])') &&
-        python3 configure.py
-          --confirm-license
-          --assume-shared
-          --destdir=/app/lib/${PY_VER}/site-packages
-          --stubsdir=/app/lib/${PY_VER}/site-packages/PyQt5
-          --sipdir=/app/share/sip/PyQt5
-          --no-designer-plugin
-          --no-qml-plugin
-          --no-python-dbus
-          --no-tools
-          --enable=QtCore
-          --enable=QtGui
-          --enable=QtNetwork
-          --enable=QtWidgets
-          ${config_opt}
-      - make -j $FLATPAK_BUILDER_N_JOBS
-      - make install
-    sources:
-      - type: archive
-        url: https://files.pythonhosted.org/packages/source/p/pyqt5/PyQt5-5.15.2.tar.gz
-        sha256: 372b08dc9321d1201e4690182697c5e7ffb2e0770e6b4a45519025134b12e4fc
-
-    modules:
-      - pyqt5-pypi-dependencies.json
 
   - name: KindleComicConverter
     buildsystem: simple
@@ -98,4 +79,4 @@ modules:
           - exec qemu-i386 ${XDG_DATA_HOME}/kindlegen "$@"
         
     modules:
-      - kcc-pypi-dependencies.json
+      - dependencies/kcc-pypi-dependencies.json
