@@ -2,6 +2,8 @@ app-id: io.github.ciromattia.kcc
 runtime: org.kde.Platform
 runtime-version: '5.15-21.08'
 sdk: org.kde.Sdk
+base: com.riverbankcomputing.PyQt.BaseApp
+base-version: 5.15-21.08
 command: kcc
 finish-args:
   - --socket=fallback-x11
@@ -13,21 +15,13 @@ finish-args:
   - --talk-name=org.kde.StatusNotifierWatcher
 
 cleanup-commands:
-  - rm -r ${FLATPAK_DEST}/lib/*/site-packages/PyQt5/bindings
+  - /app/cleanup-BaseApp.sh
 
 build-options:
   env:
-    pyqt5_opts: >-
-      --no-designer-plugin
-      --no-qml-plugin
-      --no-tools
-      --enable QtCore
-      --enable QtGui
-      --enable QtNetwork
-      --enable QtWidgets
+    - BASEAPP_REMOVE_PYWEBENGINE=1
 
 modules:
-  - pyqt5/pyqt5.yml
   - dependencies/qemu-user-i386.json
 
   - name: p7zip
