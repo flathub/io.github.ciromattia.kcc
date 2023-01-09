@@ -5,6 +5,7 @@ sdk: org.kde.Sdk
 base: com.riverbankcomputing.PyQt.BaseApp
 base-version: 5.15-22.08
 command: kcc
+rename-icon: comic2ebook
 finish-args:
   - --socket=fallback-x11
   - --socket=wayland
@@ -12,6 +13,7 @@ finish-args:
   - --device=dri
   - --filesystem=home
   - --talk-name=org.freedesktop.Notifications
+  - --env=TMPDIR=/var/tmp
 
 cleanup-commands:
   - /app/cleanup-BaseApp.sh
@@ -23,21 +25,7 @@ build-options:
 modules:
   - dependencies/qemu-user-i386.yaml
 
-  - name: p7zip
-    no-autogen: true
-    make-args:
-      - 7z
-    cleanup:
-      - /man
-      - /share
-    sources:
-      - type: archive
-        url: https://github.com/jinfeihan57/p7zip/archive/v17.03.tar.gz
-        sha256: bb4b9b21584c0e076e0b4b2705af0dbe7ac19d378aa7f09a79da33a5b3293187
- 
-      - type: shell
-        commands: 
-        - sed -i 's|/usr/local|/app|g' makefile.common
+  - dependencies/7-zip.yaml
 
   - name: KindleComicConverter
     buildsystem: simple
@@ -46,7 +34,7 @@ modules:
       - install -Dm755 kindlegen -t $FLATPAK_DEST/bin
       - install -Dm755 ${FLATPAK_ID}.desktop -t $FLATPAK_DEST/share/applications
       - install -Dm644 ${FLATPAK_ID}.metainfo.xml -t $FLATPAK_DEST/share/metainfo
-      - mkdir -p $FLATPAK_DEST/share/icons && cp -a hicolor $FLATPAK_DEST/share/icons
+      - install -Dm644 icons/comic2ebook.png -t $FLATPAK_DEST/share/icons/hicolor/256x256/apps
     sources:
       - type: archive
         url: https://github.com/ciromattia/kcc/archive/5.5.2.tar.gz
@@ -57,9 +45,6 @@ modules:
 
       - type: file
         path: io.github.ciromattia.kcc.desktop
-
-      - type: dir
-        path: icons
 
       - type: file
         path: io.github.ciromattia.kcc.metainfo.xml

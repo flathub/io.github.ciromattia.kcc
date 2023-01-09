@@ -1,34 +1,42 @@
 name: qemu-user-i386
 config-opts:
-  - --prefix=/app
   - --target-list=i386-linux-user
-  - --disable-system
+  - --enable-attr
+  - --enable-linux-user
+  - --enable-tcg
+  - --disable-bpf
   - --disable-bsd-user
-  - --disable-kvm
+  - --disable-capstone
   - --disable-blobs
-  - --disable-xkbcommon
-  - --disable-vnc
-  - --disable-gtk
-  - --disable-sdl
-  - --disable-spice
-  - --disable-opengl
-  - --disable-werror
-  - --disable-tools
   - --disable-docs
+  - --disable-fdt
+  - --disable-gcrypt
   - --disable-glusterfs
+  - --disable-gnutls 
+  - --disable-gtk
+  - --disable-install-blobs
+  - --disable-kvm
   - --disable-libnfs
   - --disable-libiscsi
-  - --disable-vde
-  - --disable-fdt
-  - --disable-vhost-net
-  - --disable-vhost-crypto
-  - --disable-vhost-user
-  - --disable-vhost-vsock
-  - --disable-vhost-scsi
-  - --disable-tpm
-  - --disable-qom-cast-debug
-  - --disable-capstone
+  - --disable-libssh
   - --disable-linux-io-uring
+  - --disable-nettle
+  - --disable-opengl
+  - --disable-qom-cast-debug
+  - --disable-system
+  - --disable-sdl
+  - --disable-spice
+  - --disable-tpm
+  - --disable-tools
+  - --disable-vde
+  - --disable-vhost-crypto
+  - --disable-vhost-net
+  - --disable-vhost-user
+  - --disable-vhost-kernel
+  - --disable-vnc
+  - --disable-werror
+  - --disable-xen
+  - --disable-xkbcommon
 cleanup:
   - /share
 sources:
@@ -39,4 +47,8 @@ sources:
       type: anitya
       project-id: 13607
       url-template: https://download.qemu.org/qemu-$version.tar.xz
+
+  - type: shell
+    commands:
+      - sed -i "s/libdrm/libdrm-dis/g" meson.build
 
