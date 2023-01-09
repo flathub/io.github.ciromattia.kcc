@@ -58,4 +58,4 @@ modules:
           - exec qemu-i386 ${XDG_DATA_HOME}/kindlegen "$@"
         
     modules:
-      - dependencies/kcc-pypi-dependencies.json
+      - dependencies/kcc-pypi-dependencies.yaml
