@@ -1,0 +1,48 @@
+diff --git a/kindlecomicconverter/KCC_gui.py b/kindlecomicconverter/KCC_gui.py
+index 50e91dd..944cac0 100644
+--- a/kindlecomicconverter/KCC_gui.py
++++ b/kindlecomicconverter/KCC_gui.py
+@@ -41,12 +41,16 @@ from . import kindle
+ from . import KCC_ui
+ from . import KCC_ui_editor
+ 
++HOME = os.path.expanduser("~")
++XDG_DATA_HOME = os.environ.get("XDG_DATA_HOME", os.path.join(HOME, ".local", "share"))
+ 
+ class QApplicationMessaging(QtWidgets.QApplication):
+     messageFromOtherInstance = QtCore.pyqtSignal(bytes)
+ 
+     def __init__(self, argv):
+         QtWidgets.QApplication.__init__(self, argv)
++        self.setDesktopFileName("io.github.ciromattia.kcc.desktop");
++
+         self._key = 'KCC'
+         self._timeout = 1000
+         self._locked = False
+@@ -754,7 +758,7 @@ class KCCGUI(KCC_ui.Ui_mainWindow):
+                     elif sys.platform.startswith('darwin'):
+                         self.addMessage('Install it using <a href="http://brew.sh/">Brew</a>.', 'error')
+                     else:
+-                        self.addMessage('Download it and place executable in /usr/local/bin directory.', 'error')
++                        self.addMessage(f'Download it and place executable in {XDG_DATA_HOME} directory.', 'error')
+                     self.needClean = True
+                     return
+             self.worker.start()
+@@ -833,7 +837,7 @@ class KCCGUI(KCC_ui.Ui_mainWindow):
+     def detectKindleGen(self, startup=False):
+         if not sys.platform.startswith('win'):
+             try:
+-                os.chmod('/usr/local/bin/kindlegen', 0o755)
++                os.chmod(f'{XDG_DATA_HOME}/kindlegen', 0o755)
+             except Exception:
+                 pass
+         kindleGenExitCode = Popen('kindlegen -locale en', stdout=PIPE, stderr=STDOUT, stdin=PIPE, shell=True)
+@@ -860,7 +864,7 @@ class KCCGUI(KCC_ui.Ui_mainWindow):
+                     self.addMessage('Install it using <a href="http://brew.sh/">Brew</a>: <i>brew cask install kindle-c'
+                                     'omic-creator</i>', 'error')
+                 else:
+-                    self.addMessage('Download it and place executable in /usr/local/bin directory.', 'error')
++                    self.addMessage(f'Download it and place executable in {XDG_DATA_HOME} directory.', 'error')
+ 
+     def __init__(self, kccapp, kccwindow):
+         global APP, MW, GUI

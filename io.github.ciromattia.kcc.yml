@@ -52,10 +52,8 @@ modules:
         url: https://github.com/ciromattia/kcc/archive/5.5.2.tar.gz
         sha256: 7b45fcdf0149bea36e8c738e76031790c8c235c777047001279698a526be892b 
 
-      - type: shell
-        commands: 
-          - sed -i -E 's:(Download[^/]+)/usr/local/bin:\1~/.var/app/io.github.ciromattia.kcc/data:g' 
-              kindlecomicconverter/KCC_gui.py 
+      - type: patch
+        path: patch/flatpak.patch
 
       - type: file
         path: io.github.ciromattia.kcc.desktop
