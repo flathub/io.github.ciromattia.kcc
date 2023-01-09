@@ -1,0 +1,54 @@
+name: qemu-user-i386
+config-opts:
+  - --target-list=i386-linux-user
+  - --enable-attr
+  - --enable-linux-user
+  - --enable-tcg
+  - --disable-bpf
+  - --disable-bsd-user
+  - --disable-capstone
+  - --disable-blobs
+  - --disable-docs
+  - --disable-fdt
+  - --disable-gcrypt
+  - --disable-glusterfs
+  - --disable-gnutls 
+  - --disable-gtk
+  - --disable-install-blobs
+  - --disable-kvm
+  - --disable-libnfs
+  - --disable-libiscsi
+  - --disable-libssh
+  - --disable-linux-io-uring
+  - --disable-nettle
+  - --disable-opengl
+  - --disable-qom-cast-debug
+  - --disable-system
+  - --disable-sdl
+  - --disable-spice
+  - --disable-tpm
+  - --disable-tools
+  - --disable-vde
+  - --disable-vhost-crypto
+  - --disable-vhost-net
+  - --disable-vhost-user
+  - --disable-vhost-kernel
+  - --disable-vnc
+  - --disable-werror
+  - --disable-xen
+  - --disable-xkbcommon
+cleanup:
+  - /share
+sources:
+  - type: archive
+    url: https://download.qemu.org/qemu-7.2.0.tar.xz
+    sha256: 5b49ce2687744dad494ae90a898c52204a3406e84d072482a1e1be854eeb2157
+    x-checker-data:
+      type: anitya
+      project-id: 13607
+      url-template: https://download.qemu.org/qemu-$version.tar.xz
+
+  - type: shell
+    commands:
+      - sed -i "s/libdrm/libdrm-dis/g" meson.build
+

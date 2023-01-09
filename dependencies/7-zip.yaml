@@ -1,0 +1,17 @@
+name: 7-zip
+buildsystem: simple
+build-commands:
+  - |
+    for bundle in Alone2 SFXCon; do
+      pushd CPP/7zip/Bundles/${bundle}
+      make -j ${FLATPAK_BUILDER_N_JOBS} -f ../../cmpl_gcc.mak
+      popd
+    done
+  - install -Dm755 CPP/7zip/Bundles/Alone2/b/g/7zz   $FLATPAK_DEST/bin/7z
+  - install -Dm755 CPP/7zip/Bundles/SFXCon/b/g/7zCon $FLATPAK_DEST/bin/7zCon.sfx
+
+sources:
+  - type: archive
+    strip-components: 0
+    url: https://7-zip.org/a/7z2201-src.tar.xz
+    sha256: 393098730c70042392af808917e765945dc2437dee7aae3cfcc4966eb920fbc5
