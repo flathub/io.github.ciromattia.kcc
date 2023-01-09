@@ -21,7 +21,7 @@ build-options:
     - BASEAPP_REMOVE_PYWEBENGINE=1
 
 modules:
-  - dependencies/qemu-user-i386.json
+  - dependencies/qemu-user-i386.yaml
 
   - name: p7zip
     no-autogen: true
