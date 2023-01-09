@@ -43,6 +43,9 @@ modules:
       - type: patch
         path: patch/flatpak.patch
 
+      - type: patch
+        path: patch/py3.10.patch
+
       - type: file
         path: io.github.ciromattia.kcc.desktop
 
