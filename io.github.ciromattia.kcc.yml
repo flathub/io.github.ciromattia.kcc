@@ -1,6 +1,6 @@
 app-id: io.github.ciromattia.kcc
 runtime: org.kde.Platform
-runtime-version: '5.15-22.08'
+runtime-version: 5.15-22.08
 sdk: org.kde.Sdk
 base: com.riverbankcomputing.PyQt.BaseApp
 base-version: 5.15-22.08
@@ -37,14 +37,18 @@ modules:
       - install -Dm644 icons/comic2ebook.png -t $FLATPAK_DEST/share/icons/hicolor/256x256/apps
     sources:
       - type: archive
-        url: https://github.com/ciromattia/kcc/archive/5.5.2.tar.gz
-        sha256: 7b45fcdf0149bea36e8c738e76031790c8c235c777047001279698a526be892b 
+        url: https://github.com/ciromattia/kcc/archive/v5.6.1.tar.gz
+        sha256: 9cad85fa8d35ade0d3cff18f5df163eebcf3c6d11443efe881066f365222d547
+        x-checker-data:
+          type: json
+          url: https://api.github.com/repos/ciromattia/kcc/releases/latest
+          version-query: .tag_name | sub("^v"; "")
+          url-query: '"https://github.com/ciromattia/kcc/archive/v" + $version + ".tar.gz"'
+          timestamp-query: .published_at
+          is-main-source: true
 
       - type: patch
         path: patch/flatpak.patch
-
-      - type: patch
-        path: patch/py3.10.patch
 
       - type: file
         path: io.github.ciromattia.kcc.desktop
@@ -56,6 +60,6 @@ modules:
         dest-filename: kindlegen
         commands:
           - exec qemu-i386 ${XDG_DATA_HOME}/kindlegen "$@"
-        
+
     modules:
       - dependencies/kcc-pypi-dependencies.yaml

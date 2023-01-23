@@ -32,14 +32,21 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "python-slugify>=1.2.1,<3.0.0" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "python-slugify>=1.2.1" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/e2/3a/3c35e04ea05724f29c77bf5c7a27cf0c80310483655bfdc2c1c5d1ab36b6/Unidecode-1.3.2-py3-none-any.whl
-        sha256: 215fe33c9d1c889fa823ccb66df91b02524eb8cc8c9c80f9c5b8129754d27829
+        url: https://files.pythonhosted.org/packages/ab/e2/e9a00f0ccb71718418230718b3d900e71a5d16e701a3dae079a21e9cd8f8/text-unidecode-1.3.tar.gz
+        sha256: bad6603bb14d279193107714b288be206cac565dfa49aa5b105294dd5c4aab93
+        x-checker-data:
+          type: pypi
+          name: text-unidecode
+
       - type: file
-        url: https://files.pythonhosted.org/packages/1f/9c/8b07d625e9c9df567986d887f0375075abb1923e49d074a7803cd1527dae/python-slugify-2.0.1.tar.gz
-        sha256: d3e034397236020498e677a35e5c05dcc6ba1624b608b9ef7e5fe3090ccbd5a8
+        url: https://files.pythonhosted.org/packages/7c/d3/8e523f41fc3f8d3cc58d2284bb49c1961caefc1a434599ff410ddde38f82/python-slugify-7.0.0.tar.gz
+        sha256: 7a0f21a39fa6c1c4bf2e5984c9b9ae944483fd10b54804cb0e23a3ccd4954f0b
+        x-checker-data:
+          type: pypi
+          name: python-slugify
 
   - name: python3-raven
     buildsystem: simple
@@ -53,3 +60,32 @@ modules:
         x-checker-data:
           type: pypi
           name: raven
+
+  - name: python3-mozjpeg-lossless-optimization
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} cffi --no-build-isolation
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} mozjpeg-lossless-optimization --no-build-isolation
+    sources:
+      - type: file
+        url: https://files.pythonhosted.org/packages/2b/a8/050ab4f0c3d4c1b8aaa805f70e26e84d0e27004907c5b8ecc1d31815f92a/cffi-1.15.1.tar.gz
+        sha256: d400bfb9a37b1351253cb402671cea7e89bdecc294e8016a707f6d1d8ac934f9
+        x-checker-data:
+          type: pypi
+          name: cffi
+
+      - type: file
+        url: https://files.pythonhosted.org/packages/5e/0b/95d387f5f4433cb0f53ff7ad859bd2c6051051cebbb564f139a999ab46de/pycparser-2.21.tar.gz
+        sha256: e644fdec12f7872f86c58ff790da456218b10f863970249516d60a5eaca77206
+        x-checker-data:
+          type: pypi
+          name: pycparser
+
+      - type: file
+        url: https://files.pythonhosted.org/packages/62/cb/d73282f2e85058ceeb1dd19f4251ec7d47c05cff4b14d6b51e34a4f96c9e/mozjpeg-lossless-optimization-1.1.2.tar.gz
+        sha256: 0dd6cce9228e04e82692c04125974954ea184f3f7b7d4d90ff13055d12da06f7
+        x-checker-data:
+          type: pypi
+          name: mozjpeg-lossless-optimization

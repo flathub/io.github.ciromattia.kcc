@@ -1,14 +1,14 @@
 diff --git a/kindlecomicconverter/KCC_gui.py b/kindlecomicconverter/KCC_gui.py
-index 50e91dd..944cac0 100644
+index b38b962..0f5b187 100644
 --- a/kindlecomicconverter/KCC_gui.py
 +++ b/kindlecomicconverter/KCC_gui.py
-@@ -41,12 +41,16 @@ from . import kindle
- from . import KCC_ui
+@@ -41,11 +41,16 @@ from . import KCC_ui
  from . import KCC_ui_editor
+ 
  
 +HOME = os.path.expanduser("~")
 +XDG_DATA_HOME = os.environ.get("XDG_DATA_HOME", os.path.join(HOME, ".local", "share"))
- 
++
  class QApplicationMessaging(QtWidgets.QApplication):
      messageFromOtherInstance = QtCore.pyqtSignal(bytes)
  
@@ -19,7 +19,7 @@ index 50e91dd..944cac0 100644
          self._key = 'KCC'
          self._timeout = 1000
          self._locked = False
-@@ -754,7 +758,7 @@ class KCCGUI(KCC_ui.Ui_mainWindow):
+@@ -788,7 +793,7 @@ class KCCGUI(KCC_ui.Ui_mainWindow):
                      elif sys.platform.startswith('darwin'):
                          self.addMessage('Install it using <a href="http://brew.sh/">Brew</a>.', 'error')
                      else:
@@ -28,7 +28,7 @@ index 50e91dd..944cac0 100644
                      self.needClean = True
                      return
              self.worker.start()
-@@ -833,7 +837,7 @@ class KCCGUI(KCC_ui.Ui_mainWindow):
+@@ -872,7 +877,7 @@ class KCCGUI(KCC_ui.Ui_mainWindow):
      def detectKindleGen(self, startup=False):
          if not sys.platform.startswith('win'):
              try:
@@ -37,7 +37,7 @@ index 50e91dd..944cac0 100644
              except Exception:
                  pass
          kindleGenExitCode = Popen('kindlegen -locale en', stdout=PIPE, stderr=STDOUT, stdin=PIPE, shell=True)
-@@ -860,7 +864,7 @@ class KCCGUI(KCC_ui.Ui_mainWindow):
+@@ -899,7 +904,7 @@ class KCCGUI(KCC_ui.Ui_mainWindow):
                      self.addMessage('Install it using <a href="http://brew.sh/">Brew</a>: <i>brew cask install kindle-c'
                                      'omic-creator</i>', 'error')
                  else:
@@ -46,34 +46,3 @@ index 50e91dd..944cac0 100644
  
      def __init__(self, kccapp, kccwindow):
          global APP, MW, GUI
-diff --git a/kindlecomicconverter/comic2ebook.py b/kindlecomicconverter/comic2ebook.py
-index 3fe2333..a228d51 100755
---- a/kindlecomicconverter/comic2ebook.py
-+++ b/kindlecomicconverter/comic2ebook.py
-@@ -33,7 +33,7 @@ from multiprocessing import Pool
- from uuid import uuid4
- from slugify import slugify as slugifyExt
- from PIL import Image
--from subprocess import STDOUT, PIPE
-+from subprocess import STDOUT, PIPE, TimeoutExpired
- from psutil import Popen, virtual_memory, disk_usage
- from html import escape as hescape
- try:
-@@ -1189,6 +1189,7 @@ def makeMOBIWorker(item):
-         if os.path.getsize(item) < 629145600:
-             output = Popen('kindlegen -dont_append_source -locale en "' + item + '"',
-                            stdout=PIPE, stderr=STDOUT, stdin=PIPE, shell=True)
-+
-             for line in output.stdout:
-                 line = line.decode('utf-8')
-                 # ERROR: Generic error
-@@ -1201,7 +1202,8 @@ def makeMOBIWorker(item):
-                 if kindlegenErrorCode > 0:
-                     break
-                 if ":I1036: Mobi file built successfully" in line:
--                    output.terminate()
-+                    output.communicate()
-+                    break
-         else:
-             # ERROR: EPUB too big
-             kindlegenErrorCode = 23026
