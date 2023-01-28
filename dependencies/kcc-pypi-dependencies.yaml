@@ -42,8 +42,8 @@ modules:
           name: text-unidecode
 
       - type: file
-        url: https://files.pythonhosted.org/packages/7c/d3/8e523f41fc3f8d3cc58d2284bb49c1961caefc1a434599ff410ddde38f82/python-slugify-7.0.0.tar.gz
-        sha256: 7a0f21a39fa6c1c4bf2e5984c9b9ae944483fd10b54804cb0e23a3ccd4954f0b
+        url: https://files.pythonhosted.org/packages/49/3b/492affa71ccdeaadce1a6fba17e12fec301820b19b8cd7220d849686f8ec/python-slugify-8.0.0.tar.gz
+        sha256: f1da83f3c7ab839b3f84543470cd95bdb5a81f1a0b80fed502f78b7dca256062
         x-checker-data:
           type: pypi
           name: python-slugify
