@@ -21,7 +21,7 @@
   <screenshots>
     <screenshot type="default">
       <caption>The main window</caption>
-      <image type="source" width="525" height="500">https://kcc.iosphe.re/Static/Img/KCC-Windows.png</image>
+      <image type="source">https://raw.githubusercontent.com/flathub/io.github.ciromattia.kcc/update-2c82849/screenshots/Screenshot.png</image>
     </screenshot>
   </screenshots>
   <releases>
