@@ -21,10 +21,11 @@
   <screenshots>
     <screenshot type="default">
       <caption>The main window</caption>
-      <image type="source" width="525" height="500">https://kcc.iosphe.re/Static/Img/KCC-Windows.png</image>
+      <image type="source">https://raw.githubusercontent.com/flathub/io.github.ciromattia.kcc/update-2c82849/screenshots/Screenshot.png</image>
     </screenshot>
   </screenshots>
   <releases>
+    <release version="5.6.2" date="2023-05-13"/>
     <release version="5.6.1" date="2023-01-21"/>
     <release date="2021-1-10" version="5.5.2"/>
   </releases>

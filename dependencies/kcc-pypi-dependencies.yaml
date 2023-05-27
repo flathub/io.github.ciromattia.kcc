@@ -68,6 +68,8 @@ modules:
         --prefix=${FLATPAK_DEST} cffi --no-build-isolation
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
         --prefix=${FLATPAK_DEST} mozjpeg-lossless-optimization --no-build-isolation
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} distro --no-build-isolation
     sources:
       - type: file
         url: https://files.pythonhosted.org/packages/2b/a8/050ab4f0c3d4c1b8aaa805f70e26e84d0e27004907c5b8ecc1d31815f92a/cffi-1.15.1.tar.gz
@@ -89,3 +91,10 @@ modules:
         x-checker-data:
           type: pypi
           name: mozjpeg-lossless-optimization
+
+      - type: file
+        url: https://files.pythonhosted.org/packages/4b/89/eaa3a3587ebf8bed93e45aa79be8c2af77d50790d15b53f6dfc85b57f398/distro-1.8.0.tar.gz
+        sha256: 02e111d1dc6a50abb8eed6bf31c3e48ed8b0830d1ea2a1b78c61765c2513fdd8
+        x-checker-data:
+          type: pypi
+          name: distro
