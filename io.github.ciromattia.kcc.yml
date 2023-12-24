@@ -30,6 +30,8 @@ modules:
   - name: KindleComicConverter
     buildsystem: simple
     build-commands:
+      - python3 setup.py egg_info
+      - pip3 install --verbose --exists-action=i --no-index --prefix=${FLATPAK_DEST} -r KindleComicConverter.egg-info/requires.txt
       - python3 setup.py install --single-version-externally-managed --root=/ --prefix=$FLATPAK_DEST
       - install -Dm755 kindlegen -t $FLATPAK_DEST/bin
       - install -Dm755 ${FLATPAK_ID}.desktop -t $FLATPAK_DEST/share/applications
