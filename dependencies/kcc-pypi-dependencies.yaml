@@ -74,6 +74,19 @@ modules:
           type: pypi
           name: natsort
 
+  - name: requests
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} natsort --no-build-isolation
+    sources:
+      - type: file
+        url: https://files.pythonhosted.org/packages/9d/be/10918a2eac4ae9f02f6cfe6414b7a155ccd8f7f9d4380d62fd5b955065c3/requests-2.31.0.tar.gz
+        sha256: 942c5a758f98d790eaed1a29cb6eefc7ffb0d1cf7af05c3d2791656dbd6ad1e1
+        x-checker-data:
+          type: pypi
+          name: requests
+
   - name: python3-mozjpeg-lossless-optimization
     buildsystem: simple
     build-commands:
@@ -106,8 +119,8 @@ modules:
           name: mozjpeg-lossless-optimization
 
       - type: file
-        url: https://files.pythonhosted.org/packages/4b/89/eaa3a3587ebf8bed93e45aa79be8c2af77d50790d15b53f6dfc85b57f398/distro-1.8.0.tar.gz
-        sha256: 02e111d1dc6a50abb8eed6bf31c3e48ed8b0830d1ea2a1b78c61765c2513fdd8
+        url: https://files.pythonhosted.org/packages/fc/f8/98eea607f65de6527f8a2e8885fc8015d3e6f5775df186e443e0964a11c3/distro-1.9.0.tar.gz
+        sha256: 2fa77c6fd8940f116ee1d6b94a2f90b13b5ea8d019b98bc8bafdcabcdd9bdbed
         x-checker-data:
           type: pypi
           name: distro
