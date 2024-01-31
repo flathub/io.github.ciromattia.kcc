@@ -42,8 +42,8 @@ modules:
           name: text-unidecode
 
       - type: file
-        url: https://files.pythonhosted.org/packages/80/fd/8f1950415ee2124ec0c5a98cc8ba1788247169e947697b5ea3ca751ae66c/python-slugify-8.0.2.tar.gz
-        sha256: a1a02b127a95c124fd84f8f88be730e557fd823774bf19b1cd5e8704e2ae0e5e
+        url: https://files.pythonhosted.org/packages/c5/57/38d96fdbcc2f9b965c0a2cbb62b46908211b23dabda57502f3d8b372e4ca/python-slugify-8.0.3.tar.gz
+        sha256: e04cba5f1c562502a1175c84a8bc23890c54cdaf23fccaaf0bf78511508cabed
         x-checker-data:
           type: pypi
           name: python-slugify
@@ -106,8 +106,8 @@ modules:
           name: requests
           packagetype: bdist_wheel
       - type: file
-        url: https://files.pythonhosted.org/packages/96/94/c31f58c7a7f470d5665935262ebd7455c7e4c7782eb525658d3dbf4b9403/urllib3-2.1.0-py3-none-any.whl
-        sha256: 55901e917a5896a349ff771be919f8bd99aff50b79fe58fec595eb37bbc56bb3
+        url: https://files.pythonhosted.org/packages/88/75/311454fd3317aefe18415f04568edc20218453b709c63c58b9292c71be17/urllib3-2.2.0-py3-none-any.whl
+        sha256: ce3711610ddce217e6d113a2732fafad960a03fd0318c91faa79481e35c11224
         x-checker-data:
           type: pypi
           name: urllib3
