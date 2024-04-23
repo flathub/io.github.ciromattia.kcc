@@ -9,8 +9,8 @@ modules:
         --prefix=${FLATPAK_DEST} "Pillow>=5.2.0" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/f8/3e/32cbd0129a28686621434cbf17bb64bf1458bfb838f1f668262fefce145c/pillow-10.2.0.tar.gz
-        sha256: e87f0b2c78157e12d7686b27d63c070fd65d994e8ddae6f328e0dcf4a0cd007e
+        url: https://files.pythonhosted.org/packages/ef/43/c50c17c5f7d438e836c169e343695534c38c77f60e7c90389bd77981bc21/pillow-10.3.0.tar.gz
+        sha256: 9d2455fbf44c914840c793e89aa82d0e1763a14253a000743719ae5946814b2d
         x-checker-data:
           type: pypi
           name: Pillow
@@ -93,8 +93,8 @@ modules:
           name: charset-normalizer
         sha256: f30c3cb33b24454a82faecaf01b19c18562b1e89558fb6c56de4d9118a032fd5
       - type: file
-        url: https://files.pythonhosted.org/packages/bf/3f/ea4b9117521a1e9c50344b909be7886dd00a519552724809bb1f486986c2/idna-3.6.tar.gz
-        sha256: 9ecdbbd083b06798ae1e86adcbfe8ab1479cf864e4ee30fe4e46a003d12491ca
+        url: https://files.pythonhosted.org/packages/21/ed/f86a79a07470cb07819390452f178b3bef1d375f2ec021ecfc709fc7cf07/idna-3.7.tar.gz
+        sha256: 028ff3aadf0609c1fd278d8ea3089299412a7a8b9bd005dd08b9f8285bcb5cfc
         x-checker-data:
           type: pypi
           name: idna
