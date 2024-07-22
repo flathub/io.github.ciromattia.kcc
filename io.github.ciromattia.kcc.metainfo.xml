@@ -2,9 +2,9 @@
 <component type="desktop">
   <id>io.github.ciromattia.kcc</id>
   <launchable type="desktop-id">io.github.ciromattia.kcc.desktop</launchable>
-  <name>Kindle Comic Converter</name>
-  <developer_name>ciromattia</developer_name>
-  <summary>An app that allows you to transform your PNG, JPG, GIF, CBZ, CBR and CB7 files into EPUB or MOBI format e-books</summary>
+  <name>KCC</name>
+  <developer_name>axu2</developer_name>
+  <summary>Kindle Comic Converter</summary>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>ISC</project_license>
   <url type="homepage">https://kcc.iosphe.re/</url>
@@ -21,10 +21,13 @@
   <screenshots>
     <screenshot type="default">
       <caption>The main window</caption>
-      <image type="source">https://raw.githubusercontent.com/flathub/io.github.ciromattia.kcc/update-2c82849/screenshots/Screenshot.png</image>
+      <image type="source">https://raw.githubusercontent.com/flathub/io.github.ciromattia.kcc/master/screenshots/Screenshot.png</image>
     </screenshot>
   </screenshots>
   <releases>
+    <release version="6.1.0" date="2024-06-29">
+      <description></description>
+    </release>
     <release version="5.6.5" date="2023-12-23"/>
     <release version="5.6.4" date="2023-11-28"/>
     <release version="5.6.3" date="2023-08-11"/>
