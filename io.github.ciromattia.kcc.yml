@@ -34,8 +34,8 @@ modules:
       - install -Dm644 icons/comic2ebook.png -t $FLATPAK_DEST/share/icons/hicolor/256x256/apps
     sources:
       - type: archive
-        url: https://github.com/ciromattia/kcc/archive/v6.1.0.tar.gz
-        sha256: e2aeaa45861dbd0d6546007559d09e15c4dfafc4875026d674c6b67409c042d2
+        url: https://github.com/ciromattia/kcc/archive/v6.1.1.tar.gz
+        sha256: 52b0d17ca3fc234dd0e637181b6f45a0e07cf7d7e9429568d46315d8da12131b
         x-checker-data:
           type: json
           url: https://api.github.com/repos/ciromattia/kcc/releases/latest
