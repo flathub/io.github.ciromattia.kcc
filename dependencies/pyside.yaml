@@ -13,7 +13,7 @@ build-commands:
 sources:
   - type: git
     url: https://github.com/qtproject/pyside-pyside-setup.git
-    tag: v6.7.2
+    tag: v6.8.1.1
 
   - type: shell
     commands:
