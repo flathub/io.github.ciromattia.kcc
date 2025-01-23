@@ -17,6 +17,7 @@
     Additionally KCC will process your images and make sure that your comics and manga
     are fully optimized for E-Ink displays.</p>
     <p>NOTE: Please put kindlegen_linux_i386 to ~/.var/app/io.github.ciromattia.kcc/data/kindlegen</p>
+    <p>Install Flatseal, a tool for managing permissions of applications installed via Flatpak. Use it to grant KCC the All system files permission.</p>
   </description>
   <screenshots>
     <screenshot type="default">
