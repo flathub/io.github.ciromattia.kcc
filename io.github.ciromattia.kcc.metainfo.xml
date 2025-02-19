@@ -16,7 +16,7 @@
     so despite its name, KCC is tool that every E-Reader owner can happily use.
     Additionally KCC will process your images and make sure that your comics and manga
     are fully optimized for E-Ink displays.</p>
-    <p>NOTE: Please put kindlegen_linux_i386 to ~/.var/app/io.github.ciromattia.kcc/data/kindlegen</p>
+    <p>NOTE: For mobi support, download kindlegen_linux_2.6_i386_v2.9 and move the executable kindlegen to ~/.var/app/io.github.ciromattia.kcc/data/</p>
     <p>Install Flatseal, a tool for managing permissions of applications installed via Flatpak. Use it to grant KCC the All system files permission.</p>
   </description>
   <screenshots>
