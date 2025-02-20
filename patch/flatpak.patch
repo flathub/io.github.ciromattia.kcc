@@ -1,27 +1,16 @@
---- kcc/kindlecomicconverter/KCC_gui.py	2024-06-29 23:52:09.000000000 +0800
-+++ kcc-b/kindlecomicconverter/KCC_gui.py	2024-07-22 23:43:15.506719477 +0800
-@@ -44,11 +44,15 @@
+--- kcc-7.2.0/kindlecomicconverter/KCC_gui.py	2025-02-10 11:10:56.000000000 +0800
++++ kcc-7.2.0/kindlecomicconverter/KCC_gui2.py	2025-02-19 21:04:10.892195147 +0800
+@@ -46,11 +46,13 @@
  from . import KCC_ui_editor
  
  
-+HOME = os.path.expanduser("~")
-+XDG_DATA_HOME = os.environ.get("XDG_DATA_HOME", os.path.join(HOME, ".local", "share"))
 +
- class QApplicationMessaging(QtWidgets.QApplication):
-     messageFromOtherInstance = QtCore.Signal(bytes)
+ class QApplicationMessaging(QApplication):
+     messageFromOtherInstance = Signal(bytes)
  
      def __init__(self, argv):
-         QtWidgets.QApplication.__init__(self, argv)
+         QApplication.__init__(self, argv)
 +        self.setDesktopFileName("io.github.ciromattia.kcc");
          self._key = 'KCC'
          self._timeout = 1000
          self._locked = False
-@@ -842,7 +846,7 @@
-     def detectKindleGen(self, startup=False):
-         if not sys.platform.startswith('win'):
-             try:
--                os.chmod('/usr/local/bin/kindlegen', 0o755)
-+                os.chmod(f'{XDG_DATA_HOME}/kindlegen', 0o755)
-             except Exception:
-                 pass
-         try:
