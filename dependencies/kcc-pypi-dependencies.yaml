@@ -145,8 +145,8 @@ modules:
           name: pycparser
 
       - type: file
-        url: https://files.pythonhosted.org/packages/66/1c/9735b7758d681565b48244021ba813bf6ed64b55ab5fc10d824acd803345/mozjpeg_lossless_optimization-1.1.5.tar.gz
-        sha256: a78cb0fd361b01c26bb5f1d986ef4fa4026877b1a95925facaeec997ff250288
+        url: https://files.pythonhosted.org/packages/66/29/b6de0f4f69675839856bf6c2d0100c910ca17126bc8f3a786e765cb5241a/mozjpeg_lossless_optimization-1.2.0.tar.gz
+        sha256: f58a7bb522df2996e08650b1b5e9fdea4e9cb68ab56710f71bea21be87d60aa9
         x-checker-data:
           type: pypi
           name: mozjpeg-lossless-optimization
