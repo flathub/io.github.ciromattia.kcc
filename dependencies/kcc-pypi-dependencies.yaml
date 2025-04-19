@@ -113,8 +113,8 @@ modules:
           name: requests
           packagetype: bdist_wheel
       - type: file
-        url: https://files.pythonhosted.org/packages/c8/19/4ec628951a74043532ca2cf5d97b7b14863931476d117c471e8e2b1eb39f/urllib3-2.3.0-py3-none-any.whl
-        sha256: 1cee9ad369867bfdbbb48b7dd50374c0967a0bb7710050facf0dd6911440e3df
+        url: https://files.pythonhosted.org/packages/6b/11/cc635220681e93a0183390e26485430ca2c7b5f9d33b15c74c2861cb8091/urllib3-2.4.0-py3-none-any.whl
+        sha256: 4e16665048960a0900c702d4a66415956a584919c03361cac9f1df5c5dd7e813
         x-checker-data:
           type: pypi
           name: urllib3
@@ -145,8 +145,8 @@ modules:
           name: pycparser
 
       - type: file
-        url: https://files.pythonhosted.org/packages/66/1c/9735b7758d681565b48244021ba813bf6ed64b55ab5fc10d824acd803345/mozjpeg_lossless_optimization-1.1.5.tar.gz
-        sha256: a78cb0fd361b01c26bb5f1d986ef4fa4026877b1a95925facaeec997ff250288
+        url: https://files.pythonhosted.org/packages/66/29/b6de0f4f69675839856bf6c2d0100c910ca17126bc8f3a786e765cb5241a/mozjpeg_lossless_optimization-1.2.0.tar.gz
+        sha256: f58a7bb522df2996e08650b1b5e9fdea4e9cb68ab56710f71bea21be87d60aa9
         x-checker-data:
           type: pypi
           name: mozjpeg-lossless-optimization
