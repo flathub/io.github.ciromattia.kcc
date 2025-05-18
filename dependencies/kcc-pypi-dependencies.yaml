@@ -88,17 +88,17 @@ modules:
         --prefix=${FLATPAK_DEST} "requests" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/1c/ab/c9f1e32b7b1bf505bf26f0ef697775960db7932abeb7b516de930ba2705f/certifi-2025.1.31.tar.gz
+        url: https://files.pythonhosted.org/packages/e8/9e/c05b3920a3b7d20d3d3310465f50348e5b3694f4f88c6daf736eef3024c4/certifi-2025.4.26.tar.gz
         x-checker-data:
           type: pypi
           name: certifi
-        sha256: 3d5da6925056f6f18f119200434a4780a94263f10d1c21d032a6f6b2baa20651
+        sha256: 0a816057ea3cdefcef70270d2c515e4506bbc954f417fa5ade2021213bb8f0c6
       - type: file
-        url: https://files.pythonhosted.org/packages/16/b0/572805e227f01586461c80e0fd25d65a2115599cc9dad142fee4b747c357/charset_normalizer-3.4.1.tar.gz
+        url: https://files.pythonhosted.org/packages/e4/33/89c2ced2b67d1c2a61c19c6751aa8902d46ce3dacb23600a283619f5a12d/charset_normalizer-3.4.2.tar.gz
         x-checker-data:
           type: pypi
           name: charset-normalizer
-        sha256: 44251f18cd68a75b56585dd00dae26183e102cd5e0f9f1466e6df5da2ed64ea3
+        sha256: 5baececa9ecba31eff645232d59845c07aa030f0c81ee70184a90d35099a0e63
       - type: file
         url: https://files.pythonhosted.org/packages/f1/70/7703c29685631f5a7590aa73f1f1d3fa9a380e654b86af429e0934a32f7d/idna-3.10.tar.gz
         sha256: 12f65c9b470abda6dc35cf8e63cc574b1c52b11df2c86030af0ac09b01b13ea9
@@ -113,8 +113,8 @@ modules:
           name: requests
           packagetype: bdist_wheel
       - type: file
-        url: https://files.pythonhosted.org/packages/c8/19/4ec628951a74043532ca2cf5d97b7b14863931476d117c471e8e2b1eb39f/urllib3-2.3.0-py3-none-any.whl
-        sha256: 1cee9ad369867bfdbbb48b7dd50374c0967a0bb7710050facf0dd6911440e3df
+        url: https://files.pythonhosted.org/packages/6b/11/cc635220681e93a0183390e26485430ca2c7b5f9d33b15c74c2861cb8091/urllib3-2.4.0-py3-none-any.whl
+        sha256: 4e16665048960a0900c702d4a66415956a584919c03361cac9f1df5c5dd7e813
         x-checker-data:
           type: pypi
           name: urllib3
@@ -145,8 +145,8 @@ modules:
           name: pycparser
 
       - type: file
-        url: https://files.pythonhosted.org/packages/66/1c/9735b7758d681565b48244021ba813bf6ed64b55ab5fc10d824acd803345/mozjpeg_lossless_optimization-1.1.5.tar.gz
-        sha256: a78cb0fd361b01c26bb5f1d986ef4fa4026877b1a95925facaeec997ff250288
+        url: https://files.pythonhosted.org/packages/66/29/b6de0f4f69675839856bf6c2d0100c910ca17126bc8f3a786e765cb5241a/mozjpeg_lossless_optimization-1.2.0.tar.gz
+        sha256: f58a7bb522df2996e08650b1b5e9fdea4e9cb68ab56710f71bea21be87d60aa9
         x-checker-data:
           type: pypi
           name: mozjpeg-lossless-optimization
@@ -193,8 +193,8 @@ modules:
             --prefix=${FLATPAK_DEST} meson-python --no-build-isolation
         sources:
           - type: file
-            url: https://files.pythonhosted.org/packages/67/66/91d242ea8dd1729addd36069318ba2cd03874872764f316c3bb51b633ed2/meson_python-0.17.1.tar.gz
-            sha256: efb91f69f2e19eef7bc9a471ed2a4e730088cc6b39eacaf3e49fc4f930eb5f83
+            url: https://files.pythonhosted.org/packages/26/bd/fdb26366443620f1a8a4d4ec7bfa37d1fbbe7bf737b257c205bbcf95ba95/meson_python-0.18.0.tar.gz
+            sha256: c56a99ec9df669a40662fe46960321af6e4b14106c14db228709c1628e23848d
             x-checker-data:
               type: pypi
               name: meson-python
