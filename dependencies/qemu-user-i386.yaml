@@ -39,8 +39,8 @@ cleanup:
   - /share
 sources:
   - type: archive
-    url: https://download.qemu.org/qemu-9.2.2.tar.xz
-    sha256: 752eaeeb772923a73d536b231e05bcc09c9b1f51690a41ad9973d900e4ec9fbf
+    url: https://download.qemu.org/qemu-10.0.0.tar.xz
+    sha256: 22c075601fdcf8c7b2671a839ebdcef1d4f2973eb6735254fd2e1bd0f30b3896
     x-checker-data:
       type: anitya
       project-id: 13607
