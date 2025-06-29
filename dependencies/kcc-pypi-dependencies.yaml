@@ -88,11 +88,11 @@ modules:
         --prefix=${FLATPAK_DEST} "requests" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/e8/9e/c05b3920a3b7d20d3d3310465f50348e5b3694f4f88c6daf736eef3024c4/certifi-2025.4.26.tar.gz
+        url: https://files.pythonhosted.org/packages/73/f7/f14b46d4bcd21092d7d3ccef689615220d8a08fb25e564b65d20738e672e/certifi-2025.6.15.tar.gz
         x-checker-data:
           type: pypi
           name: certifi
-        sha256: 0a816057ea3cdefcef70270d2c515e4506bbc954f417fa5ade2021213bb8f0c6
+        sha256: d747aa5a8b9bbbb1bb8c22bb13e22bd1f18e9796defa16bab421f7f7a317323b
       - type: file
         url: https://files.pythonhosted.org/packages/e4/33/89c2ced2b67d1c2a61c19c6751aa8902d46ce3dacb23600a283619f5a12d/charset_normalizer-3.4.2.tar.gz
         x-checker-data:
@@ -106,15 +106,15 @@ modules:
           type: pypi
           name: idna
       - type: file
-        url: https://files.pythonhosted.org/packages/f9/9b/335f9764261e915ed497fcdeb11df5dfd6f7bf257d4a6a2a686d80da4d54/requests-2.32.3-py3-none-any.whl
-        sha256: 70761cfe03c773ceb22aa2f671b4757976145175cdfca038c02654d061d6dcc6
+        url: https://files.pythonhosted.org/packages/7c/e4/56027c4a6b4ae70ca9de302488c5ca95ad4a39e190093d6c1a8ace08341b/requests-2.32.4-py3-none-any.whl
+        sha256: 27babd3cda2a6d50b30443204ee89830707d396671944c998b5975b031ac2b2c
         x-checker-data:
           type: pypi
           name: requests
           packagetype: bdist_wheel
       - type: file
-        url: https://files.pythonhosted.org/packages/6b/11/cc635220681e93a0183390e26485430ca2c7b5f9d33b15c74c2861cb8091/urllib3-2.4.0-py3-none-any.whl
-        sha256: 4e16665048960a0900c702d4a66415956a584919c03361cac9f1df5c5dd7e813
+        url: https://files.pythonhosted.org/packages/a7/c2/fe1e52489ae3122415c51f387e221dd0773709bad6c6cdaa599e8a2c5185/urllib3-2.5.0-py3-none-any.whl
+        sha256: e6b01673c0fa6a13e374b50871808eb3bf7046c4b125b216f6bf1cc604cff0dc
         x-checker-data:
           type: pypi
           name: urllib3
@@ -145,8 +145,8 @@ modules:
           name: pycparser
 
       - type: file
-        url: https://files.pythonhosted.org/packages/66/29/b6de0f4f69675839856bf6c2d0100c910ca17126bc8f3a786e765cb5241a/mozjpeg_lossless_optimization-1.2.0.tar.gz
-        sha256: f58a7bb522df2996e08650b1b5e9fdea4e9cb68ab56710f71bea21be87d60aa9
+        url: https://files.pythonhosted.org/packages/78/91/caf3c022a328691b228a348aa3233402aab7a828f03a05d9bd95a73cd0d7/mozjpeg_lossless_optimization-1.3.1.tar.gz
+        sha256: 15658b0b5083d9105db37ba7f8fe3b8bb0c184bec683e563f8986e870650a9c0
         x-checker-data:
           type: pypi
           name: mozjpeg-lossless-optimization
