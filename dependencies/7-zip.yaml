@@ -7,7 +7,7 @@ build-commands:
       make -j ${FLATPAK_BUILDER_N_JOBS} -f ../../cmpl_gcc.mak
       popd
     done
-  - install -Dm755 CPP/7zip/Bundles/Alone2/b/g/7zz   $FLATPAK_DEST/bin/7z
+  - install -Dm755 CPP/7zip/Bundles/Alone2/b/g/7zz   $FLATPAK_DEST/bin/7zz
   - install -Dm755 CPP/7zip/Bundles/SFXCon/b/g/7zCon $FLATPAK_DEST/bin/7zCon.sfx
 
 sources:
