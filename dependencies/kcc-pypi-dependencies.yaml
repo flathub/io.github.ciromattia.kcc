@@ -9,13 +9,13 @@ modules:
         --prefix=${FLATPAK_DEST} "Pillow>=5.2.0" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/a5/26/0d95c04c868f6bdb0c447e3ee2de5564411845e36a858cfd63766bc7b563/pillow-11.0.0.tar.gz
-        sha256: 72bacbaf24ac003fea9bff9837d1eedb6088758d41e100c1552930151f677739
+        url: https://files.pythonhosted.org/packages/f3/0d/d0d6dea55cd152ce3d6767bb38a8fc10e33796ba4ba210cbab9354b6d238/pillow-11.3.0.tar.gz
+        sha256: 3828ee7586cd0b2091b6209e5ad53e20d0649bbe87164a459d0676e035e8f523
         x-checker-data:
           type: pypi
           name: Pillow
           versions:
-            <=: '11.0'
+            <=: '12.0'
 
   - name: python3-psutil
     buildsystem: simple
