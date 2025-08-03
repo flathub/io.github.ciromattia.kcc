@@ -1,5 +1,4 @@
 name: pyside
-#buildsystem: cmake-ninja
 buildsystem: simple
 build-options:
   env:

@@ -2,6 +2,8 @@ name: kcc-pypi-dependencies
 buildsystem: simple
 build-commands: []
 modules:
+  - ./pymupdf.yml
+
   - name: python3-Pillow
     buildsystem: simple
     build-commands:
