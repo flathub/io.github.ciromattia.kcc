@@ -1,0 +1,112 @@
+name: python3-pymupdf
+build-options:
+  env:
+    PYMUPDF_SETUP_MUPDF_BUILD: ''
+    PYMUPDF_INCLUDES: /app/include
+buildsystem: simple
+build-commands:
+  - ls -l /app/include/mupdf/
+  - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+    --prefix=${FLATPAK_DEST} --no-build-isolation PyMuPDF
+sources:
+  - type: file
+    url: https://files.pythonhosted.org/packages/6d/d4/70a265e4bcd43e97480ae62da69396ef4507c8f9cfd179005ee731c92a04/pymupdf-1.26.3.tar.gz
+    sha256: b7d2c3ffa9870e1e4416d18862f5ccd356af5fe337b4511093bbbce2ca73b7e5
+    x-checker-data:
+      type: pypi
+      name: PyMuPDF
+
+modules:
+  - ../shared-modules/glu/glu-9.json
+  - name: python3-clang
+    cleanup: ['*']
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} --no-build-isolation libclang
+    sources:
+      - type: file
+        url: https://files.pythonhosted.org/packages/6e/5c/ca35e19a4f142adffa27e3d652196b7362fa612243e2b916845d801454fc/libclang-18.1.1.tar.gz
+        sha256: a1214966d08d73d971287fc3ead8dfaf82eb07fb197680d8b3859dbbbbf78250
+
+  - name: swig
+    cleanup: ['*']
+    sources:
+      - type: archive
+        url: https://github.com/swig/swig/archive/refs/tags/v4.3.0.tar.gz
+        sha256: f2136da1137a20dfcec795fe0d17ca1a2465d28e3b307f122526629b6b2f2294
+
+  - name: libgumbo
+    buildsystem: autotools
+    sources:
+      - type: archive
+        url: https://github.com/google/gumbo-parser/archive/v0.10.1.tar.gz
+        sha256: 28463053d44a5dfbc4b77bcf49c8cee119338ffa636cc17fc3378421d714efad
+        x-checker-data:
+          type: anitya
+          project-id: 214990
+          stable-only: true
+          url-template: https://github.com/google/gumbo-parser/archive/v$version.tar.gz
+    cleanup:
+      - /lib/pkgconfig
+      - /include
+      - '*.a'
+      - '*.la'
+
+  - name: Leptonica
+    config-opts:
+      - --disable-static
+      - --with-pic
+    sources:
+      - type: archive
+        url: http://www.leptonica.org/source/leptonica-1.85.0.tar.gz
+        sha256: 3745ae3bf271a6801a2292eead83ac926e3a9bc1bf622e9cd4dd0f3786e17205
+        x-checker-data:
+          type: anitya
+          project-id: 1549
+          stable-only: true
+          url-template: http://www.leptonica.org/source/leptonica-$version.tar.gz
+    cleanup:
+      - /bin
+
+  - name: freeglut
+    buildsystem: cmake-ninja
+    sources:
+      - type: archive
+        url: https://github.com/FreeGLUTProject/freeglut/releases/download/v3.6.0/freeglut-3.6.0.tar.gz
+        sha256: 9c3d4d6516fbfa0280edc93c77698fb7303e443c1aaaf37d269e3288a6c3ea52
+    cleanup:
+      - /include
+
+  - name: mupdf
+    cleanup: [/include, /bin, '*.a', '*.cmd']
+    build-options:
+      env:
+        LLVM_INSTALL_DIR: /usr/lib/sdk/llvm18
+      append-path: /usr/lib/sdk/llvm18/bin
+      prepend-ld-library-path: /usr/lib/sdk/llvm18/lib
+    no-autogen: true
+    buildsystem: simple
+    build-commands:
+      - cd thirdparty/jbig2dec && ./autogen.sh && make && make prefix=/app install
+      - make VENV_FLAG= prefix=/app shared=yes build=release pydir="/app/lib/python$(python3
+        -c 'import sys; print(".".join(map(str, sys.version_info[:2])))')/site-packages"
+        libs install-shared-python
+      - cp -r platform/c++/include/mupdf /app/include/
+    sources:
+      - type: archive
+        url: https://mupdf.com/downloads/archive/mupdf-1.26.4-source.tar.gz
+        sha256: 8a57e9b78ea2c2312c91590fd5eabe1d246b5e98b585bc152100e24bf81252a1
+        x-checker-data:
+          type: anitya
+          project-id: 2034
+          stable-only: true
+          url-template: https://mupdf.com/downloads/archive/mupdf-$version-source.tar.gz
+
+      - type: shell
+        commands:
+          - |
+            {
+                printf "LINUX_OR_OPENBSD := yes\n"
+                printf "USE_SYSTEM_LIBS := yes\n"
+            } > user.make
