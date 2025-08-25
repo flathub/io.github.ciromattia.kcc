@@ -10,8 +10,8 @@ build-commands:
     --prefix=${FLATPAK_DEST} --no-build-isolation PyMuPDF
 sources:
   - type: file
-    url: https://files.pythonhosted.org/packages/6d/d4/70a265e4bcd43e97480ae62da69396ef4507c8f9cfd179005ee731c92a04/pymupdf-1.26.3.tar.gz
-    sha256: b7d2c3ffa9870e1e4416d18862f5ccd356af5fe337b4511093bbbce2ca73b7e5
+    url: https://files.pythonhosted.org/packages/90/35/031556dfc0d332d8e9ed9b61ca105138606d3f8971b9eb02e20118629334/pymupdf-1.26.4.tar.gz
+    sha256: be13a066d42bfaed343a488168656637c4d9843ddc63b768dc827c9dfc6b9989
     x-checker-data:
       type: pypi
       name: PyMuPDF
@@ -95,8 +95,8 @@ modules:
       - cp -r platform/c++/include/mupdf /app/include/
     sources:
       - type: archive
-        url: https://mupdf.com/downloads/archive/mupdf-1.26.5-source.tar.gz
-        sha256: a52daf7b2f41c5dc94d4691cd1e7cae25fc488556e614d8c3c4491d327473c40
+        url: https://mupdf.com/downloads/archive/mupdf-1.26.7-source.tar.gz
+        sha256: 52014fcecac48ae3ead947eb90572ff7da9acf9550711675872944e8ef8c4966
         x-checker-data:
           type: anitya
           project-id: 2034
