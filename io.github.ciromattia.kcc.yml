@@ -1,9 +1,9 @@
 app-id: io.github.ciromattia.kcc
 runtime: org.kde.Platform
-runtime-version: '6.9'
+runtime-version: '6.10'
 sdk: org.kde.Sdk
 sdk-extensions:
-  - org.freedesktop.Sdk.Extension.llvm18
+  - org.freedesktop.Sdk.Extension.llvm21
 command: kcc
 rename-icon: comic2ebook
 finish-args:
@@ -34,8 +34,8 @@ modules:
       - install -Dm644 icons/comic2ebook.png -t $FLATPAK_DEST/share/icons/hicolor/256x256/apps
     sources:
       - type: archive
-        url: https://github.com/ciromattia/kcc/archive/v9.0.0.tar.gz
-        sha256: 6d90ee4e72c59c2e32f9bfec9eb29b4cba5a665980a1c40f1532d3af220bba9d
+        url: https://github.com/ciromattia/kcc/archive/v9.2.2.tar.gz
+        sha256: ed6a1cb8a2c7a9410b06e381c2590e3f1016197877bcc71d1ee0464c644d52d2
         x-checker-data:
           type: json
           url: https://api.github.com/repos/ciromattia/kcc/releases/latest
