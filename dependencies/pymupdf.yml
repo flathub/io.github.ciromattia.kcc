@@ -82,9 +82,9 @@ modules:
     cleanup: [/include, /bin, '*.a', '*.cmd']
     build-options:
       env:
-        LLVM_INSTALL_DIR: /usr/lib/sdk/llvm18
-      append-path: /usr/lib/sdk/llvm18/bin
-      prepend-ld-library-path: /usr/lib/sdk/llvm18/lib
+        LLVM_INSTALL_DIR: /usr/lib/sdk/llvm21
+      append-path: /usr/lib/sdk/llvm21/bin
+      prepend-ld-library-path: /usr/lib/sdk/llvm21/lib
     no-autogen: true
     buildsystem: simple
     build-commands:

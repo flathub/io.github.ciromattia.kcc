@@ -2,9 +2,9 @@ name: pyside
 buildsystem: simple
 build-options:
   env:
-    LLVM_INSTALL_DIR: /usr/lib/sdk/llvm18
-  append-path: /usr/lib/sdk/llvm18/bin
-  prepend-ld-library-path: /usr/lib/sdk/llvm18/lib
+    LLVM_INSTALL_DIR: /usr/lib/sdk/llvm21
+  append-path: /usr/lib/sdk/llvm21/bin
+  prepend-ld-library-path: /usr/lib/sdk/llvm21/lib
 build-commands:
   - python3 setup.py install --prefix $FLATPAK_DEST --limited-api=no --qtpaths=/usr/bin/qtpaths6
     --no-qt-tools --log-level=verbose
@@ -12,7 +12,7 @@ build-commands:
 sources:
   - type: git
     url: https://github.com/qtproject/pyside-pyside-setup.git
-    tag: v6.8.1.1
+    tag: v6.10.0
 
   - type: shell
     commands:
