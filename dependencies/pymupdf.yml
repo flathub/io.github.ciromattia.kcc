@@ -10,8 +10,8 @@ build-commands:
     --prefix=${FLATPAK_DEST} --no-build-isolation PyMuPDF
 sources:
   - type: file
-    url: https://files.pythonhosted.org/packages/90/35/031556dfc0d332d8e9ed9b61ca105138606d3f8971b9eb02e20118629334/pymupdf-1.26.4.tar.gz
-    sha256: be13a066d42bfaed343a488168656637c4d9843ddc63b768dc827c9dfc6b9989
+    url: https://files.pythonhosted.org/packages/ec/d7/a6f0e03a117fa2ad79c4b898203bb212b17804f92558a6a339298faca7bb/pymupdf-1.26.6.tar.gz
+    sha256: a2b4531cd4ab36d6f1f794bb6d3c33b49bda22f36d58bb1f3e81cbc10183bd2b
     x-checker-data:
       type: pypi
       name: PyMuPDF
@@ -59,8 +59,8 @@ modules:
       - --with-pic
     sources:
       - type: archive
-        url: http://www.leptonica.org/source/leptonica-1.85.0.tar.gz
-        sha256: 3745ae3bf271a6801a2292eead83ac926e3a9bc1bf622e9cd4dd0f3786e17205
+        url: http://www.leptonica.org/source/leptonica-1.86.0.tar.gz
+        sha256: 1fa08e40bb37fd45802d5e6e7b43927449a5c47d4608ef99d3bd3f0fa76baedc
         x-checker-data:
           type: anitya
           project-id: 1549
