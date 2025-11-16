@@ -18,9 +18,6 @@ sources:
     commands:
       - sed -i -e 's|PYSIDE_TREAT_QT_INCLUDE_DIRS_AS_NON_SYSTEM|1|g' sources/pyside6/cmake/Macros/PySideModules.cmake
 
-  - type: patch
-    path: ../patch/pyside-fix-build.patch
-
 modules:
   - name: patchelf
     buildsystem: autotools
