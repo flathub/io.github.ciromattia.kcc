@@ -193,8 +193,8 @@ modules:
             --prefix=${FLATPAK_DEST} pyproject-metadata --no-build-isolation
         sources:
           - type: file
-            url: https://files.pythonhosted.org/packages/64/ae/5fa065b049e97f96880de0611dbba513f0ee313b6edd0a64664c7b46a8e8/pyproject_metadata-0.9.1.tar.gz
-            sha256: b8b2253dd1b7062b78cf949a115f02ba7fa4114aabe63fa10528e9e1a954a816
+            url: https://files.pythonhosted.org/packages/75/bd/74706b3671c443944f487a42a0148a507b733c60600df1d34cde41e6d10b/pyproject_metadata-0.10.0.tar.gz
+            sha256: 7f5bd0ef398b60169556cb17ea261d715caf7f8561238151f51b2305084ba8d4
             x-checker-data:
               type: pypi
               name: pyproject-metadata
