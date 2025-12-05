@@ -125,8 +125,8 @@ modules:
           name: requests
           packagetype: bdist_wheel
       - type: file
-        url: https://files.pythonhosted.org/packages/a7/c2/fe1e52489ae3122415c51f387e221dd0773709bad6c6cdaa599e8a2c5185/urllib3-2.5.0-py3-none-any.whl
-        sha256: e6b01673c0fa6a13e374b50871808eb3bf7046c4b125b216f6bf1cc604cff0dc
+        url: https://files.pythonhosted.org/packages/56/1a/9ffe814d317c5224166b23e7c47f606d6e473712a2fad0f704ea9b99f246/urllib3-2.6.0-py3-none-any.whl
+        sha256: c90f7a39f716c572c4e3e58509581ebd83f9b59cced005b7db7ad2d22b0db99f
         x-checker-data:
           type: pypi
           name: urllib3
@@ -193,8 +193,8 @@ modules:
             --prefix=${FLATPAK_DEST} pyproject-metadata --no-build-isolation
         sources:
           - type: file
-            url: https://files.pythonhosted.org/packages/64/ae/5fa065b049e97f96880de0611dbba513f0ee313b6edd0a64664c7b46a8e8/pyproject_metadata-0.9.1.tar.gz
-            sha256: b8b2253dd1b7062b78cf949a115f02ba7fa4114aabe63fa10528e9e1a954a816
+            url: https://files.pythonhosted.org/packages/75/bd/74706b3671c443944f487a42a0148a507b733c60600df1d34cde41e6d10b/pyproject_metadata-0.10.0.tar.gz
+            sha256: 7f5bd0ef398b60169556cb17ea261d715caf7f8561238151f51b2305084ba8d4
             x-checker-data:
               type: pypi
               name: pyproject-metadata

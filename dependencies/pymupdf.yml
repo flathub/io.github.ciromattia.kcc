@@ -95,8 +95,8 @@ modules:
       - cp -r platform/c++/include/mupdf /app/include/
     sources:
       - type: archive
-        url: https://mupdf.com/downloads/archive/mupdf-1.26.5-source.tar.gz
-        sha256: a52daf7b2f41c5dc94d4691cd1e7cae25fc488556e614d8c3c4491d327473c40
+        url: https://mupdf.com/downloads/archive/mupdf-1.26.12-source.tar.gz
+        sha256: 6baf910928f404167ba49be6340195dec340795724722b331f5a2143f5aa0d01
         x-checker-data:
           type: anitya
           project-id: 2034
