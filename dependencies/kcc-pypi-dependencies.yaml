@@ -100,11 +100,11 @@ modules:
         --prefix=${FLATPAK_DEST} "requests" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/e0/2d/a891ca51311197f6ad14a7ef42e2399f36cf2f9bd44752b3dc4eab60fdc5/certifi-2026.1.4.tar.gz
+        url: https://files.pythonhosted.org/packages/af/2d/7bf41579a8986e348fa033a31cdd0e4121114f6bce2457e8876010b092dd/certifi-2026.2.25.tar.gz
         x-checker-data:
           type: pypi
           name: certifi
-        sha256: ac726dd470482006e014ad384921ed6438c457018f4b3d204aea4281258b2120
+        sha256: e887ab5cee78ea814d3472169153c2d12cd43b14bd03329a39a9c6e2e80bfba7
       - type: file
         url: https://files.pythonhosted.org/packages/13/69/33ddede1939fdd074bce5434295f38fae7136463422fe4fd3e0e89b98062/charset_normalizer-3.4.4.tar.gz
         x-checker-data:
@@ -193,8 +193,8 @@ modules:
             --prefix=${FLATPAK_DEST} pyproject-metadata --no-build-isolation
         sources:
           - type: file
-            url: https://files.pythonhosted.org/packages/75/bd/74706b3671c443944f487a42a0148a507b733c60600df1d34cde41e6d10b/pyproject_metadata-0.10.0.tar.gz
-            sha256: 7f5bd0ef398b60169556cb17ea261d715caf7f8561238151f51b2305084ba8d4
+            url: https://files.pythonhosted.org/packages/83/fa/8bf4fa41adfebd95dce360afe3f5fca243a17932089d3d5486e95ca44c57/pyproject_metadata-0.11.0.tar.gz
+            sha256: c72fa49418bb7c5a10f25e050c418009898d1c051721d19f98a6fb6da59a66cf
             x-checker-data:
               type: pypi
               name: pyproject-metadata
