@@ -10,8 +10,8 @@ build-commands:
     --prefix=${FLATPAK_DEST} --no-build-isolation PyMuPDF
 sources:
   - type: file
-    url: https://files.pythonhosted.org/packages/48/d6/09b28f027b510838559f7748807192149c419b30cb90e6d5f0cf916dc9dc/pymupdf-1.26.7.tar.gz
-    sha256: 71add8bdc8eb1aaa207c69a13400693f06ad9b927bea976f5d5ab9df0bb489c3
+    url: https://files.pythonhosted.org/packages/f1/32/f6b645c51d79a188a4844140c5dabca7b487ad56c4be69c4bc782d0d11a9/pymupdf-1.27.2.2.tar.gz
+    sha256: ea8fdc3ab6671ca98f629d5ec3032d662c8cf1796b146996b7ad306ac7ed3335
     x-checker-data:
       type: pypi
       name: PyMuPDF
