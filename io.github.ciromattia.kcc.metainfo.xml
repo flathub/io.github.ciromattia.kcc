@@ -3,8 +3,8 @@
   <id>io.github.ciromattia.kcc</id>
   <launchable type="desktop-id">io.github.ciromattia.kcc.desktop</launchable>
   <name>KCC</name>
-  <developer id="io.github.ciromattia">
-    <name>Ciro Mattia Gonano</name>
+  <developer id="io.github.axu2">
+    <name>axu2</name>
   </developer>
   <summary>Kindle Comic Converter</summary>
   <metadata_license>CC0-1.0</metadata_license>
