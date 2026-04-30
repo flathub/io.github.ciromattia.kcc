@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<component type="desktop">
+<component type="desktop-application">
   <id>io.github.ciromattia.kcc</id>
   <launchable type="desktop-id">io.github.ciromattia.kcc.desktop</launchable>
   <name>KCC</name>
-  <developer_name>axu2</developer_name>
+  <developer id="io.github.axu2">
+    <name>axu2</name>
+  </developer>
   <summary>Kindle Comic Converter</summary>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>ISC</project_license>
-  <url type="homepage">https://kcc.iosphe.re/</url>
+  <url type="homepage">https://kcc.iosphe.re</url>
+  <url type="bugtracker">https://github.com/ciromattia/kcc/issues</url>
+  <url type="vcs-browser">https://github.com/ciromattia/kcc</url>
   <description>
     <p>Kindle Comic Converter is an app that allows you to transform your PNG, JPG, GIF, CBZ, CBR
     and CB7 files into EPUB or MOBI format e-books. Preparing comics and manga for your E-Ink
@@ -26,72 +30,31 @@
     </screenshot>
   </screenshots>
   <releases>
-    <release version="9.4.3" date="2026-01-26">
-      <description></description>
-    </release>
-    <release version="9.4.2" date="2026-01-11">
-      <description/>
-    </release>
-    <release version="9.3.8" date="2025-12-27">
-      <description/>
-    </release>
-    <release version="9.3.6" date="2025-12-09">
-      <description/>
-    </release>
-    <release version="9.3.3" date="2025-11-26">
-      <description/>
-    </release>
-    <release version="9.2.2" date="2025-11-04">
-      <description/>
-    </release>
-    <release version="9.0.0" date="2025-07-21">
-      <description/>
-    </release>
-    <release version="8.0.4" date="2025-07-10">
-      <description/>
-    </release>
-    <release version="7.6.0" date="2025-06-29">
-      <description/>
-    </release>
-    <release version="7.5.1" date="2025-06-17">
-      <description/>
-    </release>
-    <release version="7.4.1" date="2025-04-19">
-      <description/>
-    </release>
-    <release version="7.3.3" date="2025-03-13">
-      <description/>
-    </release>
-    <release version="7.2.3" date="2025-03-01">
-      <description/>
-    </release>
-    <release version="7.2.1" date="2025-02-21">
-      <description/>
-    </release>
-    <release version="7.2.0" date="2025-02-12">
-      <description/>
-    </release>
-    <release version="7.1.2" date="2025-01-07">
-      <description/>
-    </release>
-    <release version="7.1.1" date="2025-01-04">
-      <description/>
-    </release>
-    <release version="7.0.0" date="2024-11-11">
-      <description/>
-    </release>
-    <release version="6.3.1" date="2024-11-11">
-      <description/>
-    </release>
-    <release version="6.2.0" date="2024-09-08">
-      <description/>
-    </release>
-    <release version="6.1.1" date="2024-08-10">
-      <description/>
-    </release>
-    <release version="6.1.0" date="2024-06-29">
-      <description/>
-    </release>
+    <release version="10.0.1" date="2026-04-23"/>
+    <release version="9.7.2" date="2026-04-16"/>
+    <release version="9.6.2" date="2026-03-17"/>
+    <release version="9.4.3" date="2026-01-26"/>
+    <release version="9.4.2" date="2026-01-11"/>
+    <release version="9.3.8" date="2025-12-27"/>
+    <release version="9.3.6" date="2025-12-09"/>
+    <release version="9.3.3" date="2025-11-26"/>
+    <release version="9.2.2" date="2025-11-04"/>
+    <release version="9.0.0" date="2025-07-21"/>
+    <release version="8.0.4" date="2025-07-10"/>
+    <release version="7.6.0" date="2025-06-29"/>
+    <release version="7.5.1" date="2025-06-17"/>
+    <release version="7.4.1" date="2025-04-19"/>
+    <release version="7.3.3" date="2025-03-13"/>
+    <release version="7.2.3" date="2025-03-01"/>
+    <release version="7.2.1" date="2025-02-21"/>
+    <release version="7.2.0" date="2025-02-12"/>
+    <release version="7.1.2" date="2025-01-07"/>
+    <release version="7.1.1" date="2025-01-04"/>
+    <release version="7.0.0" date="2024-11-11"/>
+    <release version="6.3.1" date="2024-11-11"/>
+    <release version="6.2.0" date="2024-09-08"/>
+    <release version="6.1.1" date="2024-08-10"/>
+    <release version="6.1.0" date="2024-06-29"/>
     <release version="5.6.5" date="2023-12-23"/>
     <release version="5.6.4" date="2023-11-28"/>
     <release version="5.6.3" date="2023-08-11"/>
