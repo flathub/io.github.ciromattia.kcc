@@ -21,8 +21,8 @@ modules:
         --prefix=${FLATPAK_DEST} "Pillow>=5.2.0" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/5a/b0/cace85a1b0c9775a9f8f5d5423c8261c858760e2466c79b2dd184638b056/pillow-12.0.0.tar.gz
-        sha256: 87d4f8125c9988bfbed67af47dd7a953e2fc7b0cc1e7800ec6d2080d490bb353
+        url: https://files.pythonhosted.org/packages/8c/21/c2bcdd5906101a30244eaffc1b6e6ce71a31bd0742a01eb89e660ebfac2d/pillow-12.2.0.tar.gz
+        sha256: a830b1a40919539d07806aa58e1b114df53ddd43213d9c8b75847eee6c0182b5
         x-checker-data:
           type: pypi
           name: Pillow
@@ -34,8 +34,8 @@ modules:
         --prefix=${FLATPAK_DEST} "psutil>=5.0.0" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/2a/80/336820c1ad9286a4ded7e845b2eccfcb27851ab8ac6abece774a6ff4d3de/psutil-7.0.0.tar.gz
-        sha256: 7be9c3eba38beccb6495ea33afd982a44074b78f28c434a1f51cc07fd315c456
+        url: https://files.pythonhosted.org/packages/aa/c6/d1ddf4abb55e93cebc4f2ed8b5d6dbad109ecb8d63748dd2b20ab5e57ebe/psutil-7.2.2.tar.gz
+        sha256: 0746f5f8d406af344fd547f1c8daa5f5c33dbc293bb8d6a16d80b4bb88f59372
         x-checker-data:
           type: pypi
           name: psutil
@@ -171,8 +171,8 @@ modules:
         --prefix=${FLATPAK_DEST} "numpy>1.22.4" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/65/6e/09db70a523a96d25e115e71cc56a6f9031e7b8cd166c1ac8438307c14058/numpy-1.26.4.tar.gz
-        sha256: 2a02aba9ed12e4ac4eb3ea9421c420301a0c6460d9830d74a9df87efa4912010
+        url: https://files.pythonhosted.org/packages/d7/9f/b8cef5bffa569759033adda9481211426f12f53299629b410340795c2514/numpy-2.4.4.tar.gz
+        sha256: 2d390634c5182175533585cc89f3608a4682ccb173cc9bb940b2881c8d6f8fa0
         x-checker-data:
           type: pypi
           name: numpy
