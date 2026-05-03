@@ -14,7 +14,8 @@ build-commands:
 sources:
   - type: git
     url: https://github.com/qtproject/pyside-pyside-setup.git
-    tag: v6.10.2
+    tag: v6.10.3
+    commit: 863e6b6e6269fbd401db06e2066119b9014fcf0d
 
   - type: shell
     commands:
@@ -28,6 +29,7 @@ modules:
       - type: git
         url: https://github.com/NixOS/patchelf.git
         tag: 0.18.0
+        commit: 99c24238981b7b1084313aca8f5c493bb46f302c
 
   - name: python3-packaging
     buildsystem: simple
