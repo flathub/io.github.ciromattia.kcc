@@ -94,11 +94,11 @@ modules:
         --prefix=${FLATPAK_DEST} "requests" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/f3/ce/ee2ecad540810a79593028e88299baeae54d346cc7a0d94b6199988b89b1/certifi-2026.5.20.tar.gz
+        url: https://files.pythonhosted.org/packages/c9/c7/424b75da314c1045981bd9777432fad05a9e0c69daa4ed7e308bbaffe405/certifi-2026.6.17.tar.gz
         x-checker-data:
           type: pypi
           name: certifi
-        sha256: 69dea482ab64caa7b9f6aba1c6bf48bb6a5448d1c0f1b17ab42ad8c763a5344d
+        sha256: 024c88eeec92ca068db80f02b8b07c9cef7b9fe261d1d535abfd5abd6f6af432
       - type: file
         url: https://files.pythonhosted.org/packages/e7/a1/67fe25fac3c7642725500a3f6cfe5821ad557c3abb11c9d20d12c7008d3e/charset_normalizer-3.4.7.tar.gz
         x-checker-data:
@@ -106,8 +106,8 @@ modules:
           name: charset-normalizer
         sha256: ae89db9e5f98a11a4bf50407d4363e7b09b31e55bc117b4f7d80aab97ba009e5
       - type: file
-        url: https://files.pythonhosted.org/packages/1a/88/bcf9709822fe69d02c2a6a77956c98ce6ea8ca8767a9aadcedc7eb6a2390/idna-3.16.tar.gz
-        sha256: d7a6da03db833450fca25d2358ac9ff06cd624577a4aea3a596d5c0f77b8e03d
+        url: https://files.pythonhosted.org/packages/cd/63/9496c57188a2ee585e0f1db071d75089a11e98aa86eb99d9d7618fc1edce/idna-3.18.tar.gz
+        sha256: ffb385a7e039654cef1ab9ef32c6fafe283c0c0467bba1d9029738ce4a14a848
         x-checker-data:
           type: pypi
           name: idna
@@ -171,8 +171,8 @@ modules:
         --prefix=${FLATPAK_DEST} "numpy>1.22.4" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/d0/ad/fed0499ce6a338d2a03ebae59cd15093910c8875328855781952abf6c2fe/numpy-2.4.6.tar.gz
-        sha256: f3a3570c4a2a16746ac2c31a7c7c7b0c186b95ce902e33db6f28094ed7387dda
+        url: https://files.pythonhosted.org/packages/e7/05/3d27272d30698dc0ecb7fdfaa41ad70303b444f81722bb99bce1d818638a/numpy-2.5.0.tar.gz
+        sha256: 5a129578019311b6e56bdd714250f19b518f7dceeeb8d1af5490f4942d3f891c
         x-checker-data:
           type: pypi
           name: numpy
@@ -197,8 +197,8 @@ modules:
             --prefix=${FLATPAK_DEST} meson-python --no-build-isolation
         sources:
           - type: file
-            url: https://files.pythonhosted.org/packages/32/98/7fe5d1bf741c03c6eea04b6245737dbd79657d4f9200e82fcbb4cc12637b/meson_python-0.19.0.tar.gz
-            sha256: 9959d198aa69b57fcfd354a34518c6f795b781a73ed0656f4d01660160cc2553
+            url: https://files.pythonhosted.org/packages/8b/f0/d794d7ed8a843a8a8947768f3b329d1e8601222dc95d930f4a5f9706cd6c/meson_python-0.20.0.tar.gz
+            sha256: 6d9726ae6cd37e22f210c74b364b30180a68c20442e97ff09f3c566a414af738
             x-checker-data:
               type: pypi
               name: meson-python
