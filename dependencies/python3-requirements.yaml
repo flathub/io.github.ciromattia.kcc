@@ -1,0 +1,202 @@
+# Generated with flatpak-pip-generator -r requirements.txt --yaml --checker-data --runtime=org.kde.Sdk//6.11 --prefer-wheels=PyMuPDF,pillow,mozjpeg-lossless-optimization
+name: python3-requirements
+buildsystem: simple
+build-commands: []
+modules:
+  - name: python3-PyMuPDF
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "PyMuPDF" --no-build-isolation
+    sources:
+      - type: file
+        url: https://files.pythonhosted.org/packages/c7/06/dace3e27af26690cb20bead80dbac42941b0841eb689b8aabbd67dde16f0/pymupdf-1.28.2-cp310-abi3-manylinux_2_28_x86_64.whl
+        sha256: 397d6715c1f0df7548a92d0afd8ce370fc48fa47aeefac16be2bc04a16a8227f
+        only-arches:
+          - x86_64
+        x-checker-data:
+          type: pypi
+          name: pymupdf
+          packagetype: bdist_wheel
+      - type: file
+        url: https://files.pythonhosted.org/packages/d2/86/4a68f080b71b46802178346af46486e1697508e760855ff5f3b218a6dff7/pymupdf-1.28.2-cp310-abi3-manylinux_2_28_aarch64.whl
+        sha256: 3050a233dde1211efe89ada74e2add6238436434159f46097a1423aad2842545
+        only-arches:
+          - aarch64
+        x-checker-data:
+          type: pypi
+          name: pymupdf
+          packagetype: bdist_wheel
+  - name: python3-Pillow
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "Pillow>=5.2.0" --no-build-isolation
+    sources:
+      - type: file
+        url: https://files.pythonhosted.org/packages/f7/62/de5bdd77d935331f4f802edc11e4d82950f642caad6cb2f949837b8560e2/pillow-12.3.0-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl
+        sha256: 0847a763afefb695bc912d7c131e7e0632d4edc1d8698f58ddabec8e46b8b6d3
+        only-arches:
+          - x86_64
+        x-checker-data:
+          type: pypi
+          name: pillow
+          packagetype: bdist_wheel
+      - type: file
+        url: https://files.pythonhosted.org/packages/1f/01/e18aff37cb0b4aac47ac90f016d347a49aca667ef97f190b06ac2aabc928/pillow-12.3.0-cp313-cp313-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl
+        sha256: f7401aebd7f581d7f83a439d87d474999317ee099218e5ad25d125290990ba65
+        only-arches:
+          - aarch64
+        x-checker-data:
+          type: pypi
+          name: pillow
+          packagetype: bdist_wheel
+  - name: python3-psutil
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "psutil>=5.9.5" --no-build-isolation
+    sources:
+      - type: file
+        url: https://files.pythonhosted.org/packages/aa/c6/d1ddf4abb55e93cebc4f2ed8b5d6dbad109ecb8d63748dd2b20ab5e57ebe/psutil-7.2.2.tar.gz
+        sha256: 0746f5f8d406af344fd547f1c8daa5f5c33dbc293bb8d6a16d80b4bb88f59372
+        x-checker-data:
+          type: pypi
+          name: psutil
+  - name: python3-requests
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "requests>=2.31.0" --no-build-isolation
+    sources:
+      - type: file
+        url: https://files.pythonhosted.org/packages/0b/a7/71ac2cff56fec219ed242bb11b8efb69fcc4bec75db06fb7bfe35de520e6/certifi-2026.7.22-py3-none-any.whl
+        sha256: 62f22742b58a1a33014a2b6b706588a8d7e2a88ae7bd1a6ebe8c992928483775
+        x-checker-data:
+          type: pypi
+          name: certifi
+          packagetype: bdist_wheel
+      - type: file
+        url: https://files.pythonhosted.org/packages/cc/61/d01fc49b8dea277640b55a9e15960dbca9fdc8c9fde18e572d39c59f4019/charset_normalizer-3.5.1-py3-none-any.whl
+        sha256: 6df0ec430f9a831772c23ca5a224cba36517a58a84bb32c32bb59a9fa67c47f6
+        x-checker-data:
+          type: pypi
+          name: charset-normalizer
+          packagetype: bdist_wheel
+      - type: file
+        url: https://files.pythonhosted.org/packages/57/b0/0e52c878c53f245edd3a11020f20979b3f490f245af532c7cae3027754b5/idna-3.19-py3-none-any.whl
+        sha256: 815e7be7a7806d54abb586dc943addc79e8b2ee16915059658cbeff4b1b43bf4
+        x-checker-data:
+          type: pypi
+          name: idna
+          packagetype: bdist_wheel
+      - type: file
+        url: https://files.pythonhosted.org/packages/a0/f4/c67b0b3f1b9245e8d266f0f112c500d50e5b4e83cb6f3b71b6528104182a/requests-2.34.2-py3-none-any.whl
+        sha256: 2a0d60c172f83ac6ab31e4554906c0f3b3588d37b5cb939b1c061f4907e278e0
+        x-checker-data:
+          type: pypi
+          name: requests
+          packagetype: bdist_wheel
+      - type: file
+        url: https://files.pythonhosted.org/packages/7f/3e/5db95bcf282c52709639744ca2a8b149baccf648e39c8cc87553df9eae0c/urllib3-2.7.0-py3-none-any.whl
+        sha256: 9fb4c81ebbb1ce9531cce37674bbc6f1360472bc18ca9a553ede278ef7276897
+        x-checker-data:
+          type: pypi
+          name: urllib3
+          packagetype: bdist_wheel
+  - name: python3-python-slugify
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "python-slugify>=1.2.1" --no-build-isolation
+    sources:
+      - type: file
+        url: https://files.pythonhosted.org/packages/a4/62/02da182e544a51a5c3ccf4b03ab79df279f9c60c5e82d5e8bec7ca26ac11/python_slugify-8.0.4-py2.py3-none-any.whl
+        sha256: 276540b79961052b66b7d116620b36518847f52d5fd9e3a70164fc8c50faa6b8
+        x-checker-data:
+          type: pypi
+          name: python-slugify
+          packagetype: bdist_wheel
+      - type: file
+        url: https://files.pythonhosted.org/packages/a6/a5/c0b6468d3824fe3fde30dbb5e1f687b291608f9473681bbf7dabbf5a87d7/text_unidecode-1.3-py2.py3-none-any.whl
+        sha256: 1311f10e8b895935241623731c2ba64f4c455287888b18189350b67134a822e8
+        x-checker-data:
+          type: pypi
+          name: text-unidecode
+          packagetype: bdist_wheel
+  - name: python3-raven
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "raven>=6.0.0" --no-build-isolation
+    sources:
+      - type: file
+        url: https://files.pythonhosted.org/packages/bd/8e/62e26a88c0a1bbae677200baf0767c1022321a6555634f8129e6d55c5ddc/raven-6.10.0-py2.py3-none-any.whl
+        sha256: 44a13f87670836e153951af9a3c80405d36b43097db869a36e92809673692ce4
+        x-checker-data:
+          type: pypi
+          name: raven
+          packagetype: bdist_wheel
+  - name: python3-mozjpeg-lossless-optimization
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "mozjpeg-lossless-optimization>=1.1.2" --no-build-isolation
+    sources:
+      - type: file
+        url: https://files.pythonhosted.org/packages/9e/ef/008a1939e372c06329a3fce4279c02f328488f3526744906eeec3da7ad5f/cffi-2.1.1.tar.gz
+        sha256: dd31f52ea1086513bb9df30f8fcee9b8918323ae067a3d5b78bc826a000712be
+        x-checker-data:
+          type: pypi
+          name: cffi
+      - type: file
+        url: https://files.pythonhosted.org/packages/38/ff/7ed01c05efc23b1bd0f37194ed97f97a8a65119649294bf5255622398445/mozjpeg_lossless_optimization-1.3.2-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl
+        sha256: beb04aebccadc5e28b4432e28cbf283837d24be22e5d6916d318eb1216451d41
+        only-arches:
+          - x86_64
+        x-checker-data:
+          type: pypi
+          name: mozjpeg-lossless-optimization
+          packagetype: bdist_wheel
+      - type: file
+        url: https://files.pythonhosted.org/packages/80/06/4ee16037cf4510fd4326f423c658a391834fd9c3acc6f968997805d69c52/mozjpeg_lossless_optimization-1.3.2-cp313-cp313-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl
+        sha256: f420d24ac15bb3bd7b96c322a60a2006825ddf20f36e8074cca59f62088c1774
+        only-arches:
+          - aarch64
+        x-checker-data:
+          type: pypi
+          name: mozjpeg-lossless-optimization
+          packagetype: bdist_wheel
+      - type: file
+        url: https://files.pythonhosted.org/packages/0c/c3/44f3fbbfa403ea2a7c779186dc20772604442dde72947e7d01069cbe98e3/pycparser-3.0-py3-none-any.whl
+        sha256: b727414169a36b7d524c1c3e31839a521725078d7b2ff038656844266160a992
+        x-checker-data:
+          type: pypi
+          name: pycparser
+          packagetype: bdist_wheel
+  - name: python3-natsort
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "natsort>=8.4.0" --no-build-isolation
+    sources:
+      - type: file
+        url: https://files.pythonhosted.org/packages/ef/82/7a9d0550484a62c6da82858ee9419f3dd1ccc9aa1c26a1e43da3ecd20b0d/natsort-8.4.0-py3-none-any.whl
+        sha256: 4732914fb471f56b5cce04d7bae6f164a592c7712e1c85f9ef585e197299521c
+        x-checker-data:
+          type: pypi
+          name: natsort
+          packagetype: bdist_wheel
+  - name: python3-distro
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "distro>=1.8.0" --no-build-isolation
+    sources:
+      - type: file
+        url: https://files.pythonhosted.org/packages/12/b3/231ffd4ab1fc9d679809f356cebee130ac7daa00d6d6f3206dd4fd137e9e/distro-1.9.0-py3-none-any.whl
+        sha256: 7bffd925d65168f85027d8da9af6bddab658135b840670a223589bc0c8ef02b2
+        x-checker-data:
+          type: pypi
+          name: distro
+          packagetype: bdist_wheel
