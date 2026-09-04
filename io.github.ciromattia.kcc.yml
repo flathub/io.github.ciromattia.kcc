@@ -1,9 +1,11 @@
 app-id: io.github.ciromattia.kcc
 runtime: org.kde.Platform
-runtime-version: '6.10'
+runtime-version: '6.11'
 sdk: org.kde.Sdk
 sdk-extensions:
-  - org.freedesktop.Sdk.Extension.llvm21
+  - org.freedesktop.Sdk.Extension.llvm22
+base: io.qt.PySide.BaseApp
+base-version: '6.11'
 command: kcc
 rename-icon: comic2ebook
 finish-args:
@@ -14,12 +16,15 @@ finish-args:
   - --filesystem=home
   - --talk-name=org.freedesktop.Notifications
   - --env=TMPDIR=/var/tmp
-
+build-options:
+  env:
+    BASEAPP_REMOVE_WEBENGINE: '1'
+cleanup-commands:
+  - /app/cleanup-BaseApp.sh
 modules:
-  - dependencies/pyside.yaml
   - dependencies/qemu-user-i386.yaml
-
   - dependencies/7-zip.yaml
+  - dependencies/python3-requirements.yaml
 
   - name: KindleComicConverter
     buildsystem: simple
@@ -34,8 +39,8 @@ modules:
       - install -Dm644 icons/comic2ebook.png -t $FLATPAK_DEST/share/icons/hicolor/256x256/apps
     sources:
       - type: archive
-        url: https://github.com/ciromattia/kcc/archive/v11.0.1.tar.gz
-        sha256: 06b8eddfd527a201e544220eda2bc80e5b4c23c4966a213b3558984947b534f5
+        url: https://github.com/ciromattia/kcc/archive/v11.0.3.tar.gz
+        sha256: 328b8be1bbc6bcdc5c5865bd056b88e0b84811c8ecd168a7df53ccfd01ee795f
         x-checker-data:
           type: json
           url: https://api.github.com/repos/ciromattia/kcc/releases/latest
@@ -58,6 +63,3 @@ modules:
         commands:
           - chmod 755 ${XDG_DATA_HOME}/kindlegen
           - exec qemu-i386 ${XDG_DATA_HOME}/kindlegen "$@"
-
-    modules:
-      - dependencies/kcc-pypi-dependencies.yaml
