@@ -111,8 +111,8 @@ modules:
         --prefix=${FLATPAK_DEST} "python-slugify>=1.2.1" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/a4/62/02da182e544a51a5c3ccf4b03ab79df279f9c60c5e82d5e8bec7ca26ac11/python_slugify-8.0.4-py2.py3-none-any.whl
-        sha256: 276540b79961052b66b7d116620b36518847f52d5fd9e3a70164fc8c50faa6b8
+        url: https://files.pythonhosted.org/packages/16/cc/bf2237784cddf5c37f5e4cb25f60670a0c57c3d8ce15d43da16f472c08ef/python_slugify-9.0.0-py3-none-any.whl
+        sha256: b1180fb0fd6b3590e7fbd8328b08d56cde9dcac736527a070c0a811480621316
         x-checker-data:
           type: pypi
           name: python-slugify
