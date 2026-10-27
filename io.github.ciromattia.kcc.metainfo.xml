@@ -34,6 +34,9 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release version="12.1.2" date="2026-10-26">
+      <description></description>
+    </release>
     <release version="12.1.1" date="2026-10-22">
       <url>https://github.com/ciromattia/kcc/releases/tag/v12.1.1</url>
     </release>
