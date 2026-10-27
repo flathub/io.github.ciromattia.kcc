@@ -29,18 +29,15 @@ modules:
   - name: KindleComicConverter
     buildsystem: simple
     build-commands:
-      - python3 setup.py egg_info
-      - pip3 install --verbose --exists-action=i --no-index --prefix=${FLATPAK_DEST}
-        -r KindleComicConverter.egg-info/requires.txt
-      - python3 setup.py install --single-version-externally-managed --root=/ --prefix=$FLATPAK_DEST
+      - pip3 install --verbose --exists-action=i --no-index --prefix=${FLATPAK_DEST} . --no-build-isolation
       - install -Dm755 kindlegen -t $FLATPAK_DEST/bin
       - install -Dm755 ${FLATPAK_ID}.desktop -t $FLATPAK_DEST/share/applications
       - install -Dm644 ${FLATPAK_ID}.metainfo.xml -t $FLATPAK_DEST/share/metainfo
       - install -Dm644 icons/comic2ebook.png -t $FLATPAK_DEST/share/icons/hicolor/256x256/apps
     sources:
       - type: archive
-        url: https://github.com/ciromattia/kcc/archive/v12.1.1.tar.gz
-        sha256: fba82c97e1ac5a1b9bdd221c619b41f8dfacc653ab81b516d6afbdca6ce67cb5
+        url: https://github.com/ciromattia/kcc/archive/v12.1.2.tar.gz
+        sha256: ac8ca44a2c2911d2755887b5badbe1746b53108ac77b06b8615e90b75646df9e
         x-checker-data:
           type: json
           url: https://api.github.com/repos/ciromattia/kcc/releases/latest
